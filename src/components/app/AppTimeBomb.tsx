@@ -3,28 +3,47 @@ import { useSelector } from 'react-redux';
 import { t } from '@lingui/macro';
 import { RootState } from '../../modules/rootReducer';
 
-const CRITICAL_HEIGHT = 4608 * 30;
+const RESET_TIMEOUT = 4 * 60 * 60 * 1000; // 4 hours
+const INFO_HEIGHT = 4608 * 32; // 32 days
 
 export default function AppTimeBomb() {
   const [showed, setShowed] = useState<boolean>(false);
+  const [timeoutId, setTimeoutId] = useState<number | undefined>();
 
   const peakHeight = useSelector(
     (state: RootState) => state.full_node_state.blockchain_state?.peak?.height ?? 0,
   );
 
-  useEffect(() => {
-    if (showed || peakHeight < CRITICAL_HEIGHT) {
+  async function informUser() {
+    if (showed || peakHeight < INFO_HEIGHT) {
       return;
     }
 
     setShowed(true);
 
     // @ts-ignore
-    window.remote.dialog.showMessageBox({
+    await window.remote.dialog.showMessageBox(window.remote.getCurrentWindow(), {
       type: 'warning',
       message: t`You need to upgrade the Chia application as this version will stop working soon!`,
     });
-  }, [peakHeight, showed]);
+
+    const newTimeoutId = setTimeout(() => {
+      setShowed(false);
+    }, RESET_TIMEOUT);
+
+    // @ts-ignore
+    setTimeoutId(newTimeoutId);
+  }
+
+  useEffect(() => {
+    informUser();
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    }
+  }, [peakHeight, showed, timeoutId]);
 
   return null;
 }
