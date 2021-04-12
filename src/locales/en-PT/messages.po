@@ -8,7 +8,7 @@ msgstr ""
 "Language: en_PT\n"
 "Project-Id-Version: chia-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-04-11 23:43\n"
+"PO-Revision-Date: 2021-04-12 11:40\n"
 "Last-Translator: \n"
 "Language-Team: Pirate English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -1710,7 +1710,7 @@ msgstr "This trade was added t' the blockchain at this booty number"
 
 #: src/components/app/AppTimeBombAlert.tsx:11
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
-msgstr ""
+msgstr "T'is version o' Chia is no longer workin' wit' the blockchain 'n no good fer plunderin'."
 
 #: src/components/fullNode/FullNode.jsx:86
 msgid "Time Created"
