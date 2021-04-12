@@ -8,7 +8,7 @@ msgstr ""
 "Language: de_DE\n"
 "Project-Id-Version: chia-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-04-11 23:43\n"
+"PO-Revision-Date: 2021-04-12 23:54\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -549,8 +549,8 @@ msgid "Difficulty"
 msgstr "Schwierigkeit"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:114
-msgid "Disable bifield plotting when your temporary directory is on fast storage like SSD or you need lower per process RAM requirements. Plotting with bitfield enabled has about 20% less overall writes."
-msgstr "Deaktiviere bitfield plotting, wenn dein temporäres Verzeichnis auf schnellem Speicher wie z.B. SSDs ist oder weniger RAM-Anforderungen pro Prozess benötigt wird. Beim Plotten mit aktiviertem Bitfeld werden insgesamt etwa 20% weniger Schreibvorgänge ausgeführt."
+#~ msgid "Disable bifield plotting when your temporary directory is on fast storage like SSD or you need lower per process RAM requirements. Plotting with bitfield enabled has about 20% less overall writes."
+#~ msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:109
 msgid "Disable bitfield plotting"
@@ -1221,6 +1221,10 @@ msgstr "Plotting"
 msgid "Plotting in parallel can save time. Otherwise, add plot(s) to the queue."
 msgstr "Paralleles plotten kann Zeit sparen. Andernfalls kannst du Plots der Warteschlange hinzufügen."
 
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:114
+msgid "Plotting with bitfield enabled has about 30% less overall writes and is now almost always faster. You may see reduced memory requirements with bitfield plotting disabled. If your CPU design is from before 2010 you may have to disbale bitfield plotting."
+msgstr "Plotten mit Bitfield aktiviert verursacht etwa 30% weniger Schreiboperationen und ist nun fast immer schneller. Möglicherweise entsteht reduzierter Speicherbedarf bei deaktiviertem Bitfield-Plotting. Wenn dein CPU-Design von vor 2010 stammt, ist es eventuell ratsam Bitfield-Plotten zu deaktivieren."
+
 #: src/components/plot/overview/PlotOverviewPlots.tsx:55
 msgid "Pool Key"
 msgstr "Pool Schlüssel"
@@ -1617,6 +1621,10 @@ msgstr "Synchronisieren {progress}/{tip}"
 msgid "Temporary folder location"
 msgstr "Temporärer Verzeichnisort"
 
+#: src/components/app/AppTimeBomb.tsx:28
+msgid "The application will stop working at block height 193536."
+msgstr "Die Anwendung wird in Blockhöhe 193536 aufhören zu arbeiten."
+
 #: src/components/farm/FarmFullNodeConnections.tsx:58
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
 msgstr "Der vollständige Node, mit dem dein Farmer verbunden ist, befindet sich unten. <0>Erfahre mehr</0>"
@@ -1714,7 +1722,7 @@ msgstr "Dieser Handel wurde auf der Blockchain in dieser Blockhöhe aufgenommen"
 
 #: src/components/app/AppTimeBombAlert.tsx:11
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
-msgstr ""
+msgstr "Diese Version von Chia ist nicht mehr kompatibel mit der Blockchain und kann nicht sicher farmen."
 
 #: src/components/fullNode/FullNode.jsx:86
 msgid "Time Created"
@@ -1952,8 +1960,8 @@ msgid "You have {0}% of the space on the network, so farming a block will take {
 msgstr "Du hast {0}% von dem Speicher des Netzwerks, also einen Block farmen wird voraussichtlich {expectedTimeToWin} dauern."
 
 #: src/components/app/AppTimeBomb.tsx:28
-msgid "You need to upgrade the Chia application as this version will stop working soon!"
-msgstr ""
+#~ msgid "You need to upgrade the Chia application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the Chia application as this version will stop working soon!"
 
 #: src/components/farm/overview/FarmOverview.tsx:24
 msgid "Your Farm Overview"
